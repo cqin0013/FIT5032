@@ -1,6 +1,7 @@
 <!-- App.vue -->
 <script setup>
 import JSONVue from './components/JSON.vue'
+import Form from "./components/Form.vue";
 </script>
 
 <template>
@@ -11,7 +12,8 @@ import JSONVue from './components/JSON.vue'
   </p>
 
 
-  <JSONVue />
+  <!--<JSONVue />-->
+  <Form />
 </template>
 
 <style scoped></style>
