@@ -12,12 +12,12 @@ const avg = computed(() => {
   const vals = Object.values(scores.value).map(Number);
   if (!vals.length) return "—";
   const m = vals.reduce((a, b) => a + b, 0) / vals.length;
-  return `${m.toFixed(1)} / 5（${vals.length} 人）`;
+  return `${m.toFixed(1)} / 5（${vals.length} ）`;
 });
 
 const setScore = async (n) => {
   const user = auth.currentUser;
-  if (!user) return alert("Login first");
+  if (!user) return alert("login pls");
   myScore.value = n;
   await set(dbRef(db, `ratings/${props.itemId}/${user.uid}`), n);
   await loadScores();
@@ -36,6 +36,10 @@ onMounted(loadScores);
     <div>
       <button v-for="n in 5" :key="n" @click="setScore(n)">{{ n <= myScore ? "★" : "☆" }}</button>
     </div>
-    <div style="margin-top:8px;">AVERAGE：{{ avg }}</div>
+    <div style="margin-top:8px;">average：{{ avg }}</div>
   </div>
 </template>
+
+<style scoped>
+button { border:none; background:transparent; font-size:20px; cursor:pointer; }
+</style>
