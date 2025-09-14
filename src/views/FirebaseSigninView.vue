@@ -27,14 +27,26 @@ const login = async () => {
 
   loading.value = true;
   try {
+    // 这里只负责“登录”本身
     const cred = await signInWithEmailAndPassword(auth, email.value, password.value);
-    // Read the role and cache it after logging in
-    const snap = await get(dbRef(db, `roles/${cred.user.uid}`));
-    setRole(snap.exists() ? snap.val() : "user");
-    message.value = "✅ Login successful：" + cred.user.email;
-    router.push("/");
+
+    // 登录已成功，后续读取角色即便失败也不算登录失败
+    let role = "user";
+    try {
+      const snap = await get(dbRef(db, `roles/${cred.user.uid}`));
+      if (snap.exists()) role = snap.val();
+    } catch (e) {
+      // 读取角色失败就用默认 user，不抛给外层
+      console.warn("read role failed:", e?.code || e);
+    }
+    setRole(role);
+
+    message.value = "✅ Login successful: " + cred.user.email;
+    router.push("/"); // 跳转主页
   } catch (e) {
-    message.value = "❌ Login Failed：" + (e.code || "Please check your account or try again later");
+    // 只有登录失败才会到这里
+    message.value =
+      "❌ Login Failed: " + (e?.code || "Please check your account or try again later");
   } finally {
     loading.value = false;
   }

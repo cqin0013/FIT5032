@@ -2,31 +2,48 @@
 import { ref, computed, onMounted, onBeforeUnmount } from "vue";
 import { useRouter } from "vue-router";
 import { onAuthStateChanged, signOut } from "firebase/auth";
-import { auth } from "../firebase";            // Firebase
-import { getRole, clearRole } from "../stores/auth"; //localStorage
+import { ref as dbRef, get } from "firebase/database";
+import { auth, db } from "../firebase";                  // Firebase
+import { getRole, setRole, clearRole } from "../stores/auth"; // localStorage
 
 const router = useRouter();
 
-
 const userEmail = ref("");
-const role = ref(getRole());
+const role = ref(getRole() || "guest");
 const authed = computed(() => !!userEmail.value);
 
 let unsub = null;
 onMounted(() => {
-
-  unsub = onAuthStateChanged(auth, (u) => {
+  // 监听登录状态变化：登录时从 DB 读取角色，并写回本地缓存；登出时清空
+  unsub = onAuthStateChanged(auth, async (u) => {
     userEmail.value = u?.email || "";
-    role.value = getRole();
+
+    if (!u) {
+      clearRole();
+      role.value = "guest";
+      return;
+    }
+
+    try {
+      const snap = await get(dbRef(db, `roles/${u.uid}`));
+      const r = snap.exists() ? snap.val() : "user"; // 默认 user
+      setRole(r);         // 同步写入 localStorage，供其它页面使用
+      role.value = r;
+    } catch (err) {
+      // 如果因为规则/网络失败，回退到本地缓存的角色，仍保持可用
+      role.value = getRole() || "user";
+      // console.warn("load role failed:", err);
+    }
   });
 });
-onBeforeUnmount(() => unsub && unsub());
 
+onBeforeUnmount(() => unsub && unsub());
 
 const onLogout = async () => {
   await signOut(auth);
   clearRole();
-  router.push("/FireLogin"); // /login
+  role.value = "guest";
+  router.push("/FireLogin");
 };
 </script>
 
