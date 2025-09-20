@@ -1,1 +1,1 @@
-export { auth, db, fs } from './firebase/init'
+export { auth, rtdb, fs } from './firebase/init'

@@ -13,7 +13,7 @@ import { ref } from "vue";
 import { useRouter } from "vue-router";
 import { signInWithEmailAndPassword } from "firebase/auth";
 import { ref as dbRef, get } from "firebase/database";
-import { auth, db } from "../firebase";
+import { auth, rtdb } from "../firebase";
 import { setRole } from "../stores/auth";
 
 const email = ref(""); const password = ref(""); const message = ref(""); const loading = ref(false);
@@ -33,7 +33,7 @@ const login = async () => {
     // 登录已成功，后续读取角色即便失败也不算登录失败
     let role = "user";
     try {
-      const snap = await get(dbRef(db, `roles/${cred.user.uid}`));
+      const snap = await get(dbRef(rtdb, `roles/${cred.user.uid}`));
       if (snap.exists()) role = snap.val();
     } catch (e) {
       // 读取角色失败就用默认 user，不抛给外层

@@ -2,7 +2,7 @@
 <script setup>
 import { ref, onMounted, onBeforeUnmount, computed } from 'vue'
 import { ref as dbRef, onValue, set } from 'firebase/database'
-import { auth, db } from '../firebase'
+import { auth, rtdb } from '../firebase'
 
 const props = defineProps({ itemId: { type: String, required: true } })
 
@@ -26,14 +26,14 @@ const setScore = async (n) => {
     alert('请先登录')
     return
   }
-  await set(dbRef(db, `ratings/${props.itemId}/${user.uid}`), n)
+  await set(dbRef(rtdb, `ratings/${props.itemId}/${user.uid}`), n)
   myScore.value = n
 }
 
 let off = null
 onMounted(() => {
   // 实时监听该条目的所有评分
-  off = onValue(dbRef(db, `ratings/${props.itemId}`), (snap) => {
+  off = onValue(dbRef(rtdb, `ratings/${props.itemId}`), (snap) => {
     const data = snap.val() || {}
     scores.value = data
     const uid = auth.currentUser?.uid

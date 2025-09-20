@@ -38,7 +38,7 @@ import { ref } from "vue";
 import { useRouter } from "vue-router";
 import { createUserWithEmailAndPassword } from "firebase/auth";
 import { ref as dbRef, set } from "firebase/database";
-import { auth, db } from "../firebase";
+import { auth, rtdb } from "../firebase";
 
 const email = ref("");
 const password = ref("");
@@ -91,7 +91,7 @@ const register = async () => {
 
     // 2) 再尝试写入默认角色（失败也不影响注册成功）
     try {
-      await set(dbRef(db, `roles/${cred.user.uid}`), "user");
+      await set(dbRef(rtdb, `roles/${cred.user.uid}`), "user");
     } catch (err) {
 
       console.warn("Failed to write role:", err);

@@ -6,12 +6,21 @@ import AdminView from "../views/AdminView.vue";
 import { auth } from "../firebase";
 import { getRole } from "../stores/auth";
 
+import AddBookView from '@/views/AddBookView.vue'
+
 const routes = [
   { path: "/", name: "Home", component: HomeView },
   { path: "/FireLogin", name: "FireLogin", component: FirebaseSigninView },
   { path: "/FireRegister", name: "FireRegister", component: FirebaseRegisterView },
   // only admin 
   { path: "/admin", name: "Admin", component: AdminView, meta: { requiresAuth: true, role: "admin" } },
+
+
+  {
+    path: '/addbook',
+    name: 'AddBook',
+    component: AddBookView
+  }
 ];
 
 const router = createRouter({
@@ -28,5 +37,7 @@ router.beforeEach((to, _from, next) => {
   }
   next();
 });
+
+
 
 export default router;
