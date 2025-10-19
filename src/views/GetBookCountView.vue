@@ -21,7 +21,7 @@ export default {
     async getBookCount() {
       try {
         const response = await axios.get(
-          'https://us-central1-week7-yiwei.cloudfunctions.net/countBooks'
+          'https://us-central1-fit5032-9023a.cloudfunctions.net/countBooks'
           // ↑ 这里的 URL 等你自己的 Cloud Function 部署好后替换
         );
         this.count = response.data.count;

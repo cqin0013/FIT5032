@@ -3,30 +3,72 @@
     "id": 1,
     "name": "Jane Austen",
     "birthYear": 1775,
-    "genres": ["Romance", "Social commentary"],
+    "genres": [
+      "Romance",
+      "Social commentary"
+    ],
     "famousWorks": [
-      { "title": "Pride and Prejudice", "year": 1813 },
-      { "title": "Sense and Sensibility", "year": 1811 }
+      {
+        "title": "Pride and Prejudice",
+        "year": 1813
+      },
+      {
+        "title": "Sense and Sensibility",
+        "year": 1811
+      }
     ]
   },
   {
     "id": 2,
     "name": "George Orwell",
     "birthYear": 1903,
-    "genres": ["Dystopian", "Political satire"],
+    "genres": [
+      "Dystopian",
+      "Political satire"
+    ],
     "famousWorks": [
-      { "title": "1984", "year": 1949 },
-      { "title": "Animal Farm", "year": 1945 }
+      {
+        "title": "1984",
+        "year": 1949
+      },
+      {
+        "title": "Animal Farm",
+        "year": 1945
+      }
     ]
   },
   {
     "id": 3,
     "name": "Agatha Christie",
     "birthYear": 1890,
-    "genres": ["Mystery", "Crime fiction"],
+    "genres": [
+      "Mystery",
+      "Crime fiction"
+    ],
     "famousWorks": [
-      { "title": "Murder on the Orient Express", "year": 1934 },
-      { "title": "Death on the Nile", "year": 1937 }
+      {
+        "title": "Murder on the Orient Express",
+        "year": 1934
+      },
+      {
+        "title": "Death on the Nile",
+        "year": 1937
+      }
     ]
+  },
+  {
+    "name": "Haruki Murakami",
+    "born": 1949,
+    "genre": "Fiction"
+  },
+  {
+    "name": "Ursula K. Le Guin",
+    "born": 1929,
+    "genre": "Sci-Fi"
+  },
+  {
+    "name": "Agatha Christie",
+    "born": 1890,
+    "genre": "Mystery"
   }
 ]
