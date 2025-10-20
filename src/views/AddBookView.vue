@@ -4,13 +4,13 @@
 
     <form @submit.prevent="addBook">
       <div class="mb-3">
-        <label for="isbn">ISBN:</label>
+        <label for="isbn">Resource ID:</label>
         <!--v-model.number -->
         <input id="isbn" type="number" v-model.number="isbn" required min="0" class="form-control" />
       </div>
 
       <div class="mb-3">
-        <label for="name">Name:</label>
+        <label for="name">Title:</label>
         <input id="name" type="text" v-model.trim="name" required maxlength="120" class="form-control" />
       </div>
 

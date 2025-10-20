@@ -2,7 +2,7 @@
   <div id="app">
     <h1>Published Resources Count</h1>
     <button @click="getBookCount">Resource Counter</button>
-    <p v-if="count !== null">Total number of books: {{ count }}</p>
+    <p v-if="count !== null">Total number of resources: {{ count }}</p>
     <p v-if="error">{{ error }}</p>
   </div>
 </template>

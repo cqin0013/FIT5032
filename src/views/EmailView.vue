@@ -1,6 +1,6 @@
 <template>
   <div style="max-width:520px;margin:1rem auto;">
-    <h1 class="text-lg font-semibold mb-2">Send Email</h1>
+    <h1 class="text-lg font-semibold mb-2">Contact Support Team</h1>
     <p class="text-sm text-gray-600 mb-3">
       Uses Cloud Function <code>sendMail</code>. Supports attachments.
     </p>

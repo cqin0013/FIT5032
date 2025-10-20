@@ -16,7 +16,23 @@ import GeoLocationView from "../views/GeoLocationView.vue";
 import EmailView from "../views/EmailView.vue";
 import AboutView from "../views/AboutView.vue";
 
+
+import AnalyticsView from "@/views/AnalyticsView.vue";
+import BookingView from "@/views/BookingView.vue";
+import BulkEmailView from "@/views/BulkEmailView.vue";
+import APIDocsView from "@/views/APIDocsView.vue";
+
+
 const routes = [
+
+{ path: "/analytics", name: "Analytics", component: AnalyticsView },
+{ path: "/booking", name: "Booking", component: BookingView },
+
+{ path: "/bulk-email", name: "BulkEmail", component: BulkEmailView, meta: { requiresAuth: true, role: "admin" } },
+{ path: "/api-docs", name: "APIDocs", component: APIDocsView },
+
+
+
   { path: "/", name: "Home", component: HomeView },
   { path: "/about", name: "About", component: AboutView },
 

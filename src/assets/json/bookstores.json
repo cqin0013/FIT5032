@@ -9,8 +9,8 @@
     "weekends": { "open": "10:00 AM", "close": "10:00 PM" }
   },
   "stores": [
-    { "name": "Uni Bookstore",  "city": "Melbourne", "lat": -37.8109, "lng": 144.9650 },
-    { "name": "City Books",     "city": "Melbourne", "lat": -37.8167, "lng": 144.9670 },
-    { "name": "Docklands Lit",  "city": "Melbourne", "lat": -37.8182, "lng": 144.9460 }
+    { "name": "Monash Counselling",  "city": "Melbourne", "lat": -37.8109, "lng": 144.9650 },
+    { "name": "Headspace Melbourne",     "city": "Melbourne", "lat": -37.8167, "lng": 144.9670 },
+    { "name": "Beyond Blue Hub",  "city": "Melbourne", "lat": -37.8182, "lng": 144.9460 }
   ]
 }

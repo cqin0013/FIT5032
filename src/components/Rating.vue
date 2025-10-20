@@ -16,7 +16,7 @@ const avg = computed(() => {
   const vals = Object.values(scores.value).map(Number)
   if (!vals.length) return '—'
   const m = vals.reduce((a, b) => a + b, 0) / vals.length
-  return `${m.toFixed(1)} / 5（${vals.length}人）`
+  return `${m.toFixed(1)} / 5（${vals.length}people）`
 })
 
 // 评分

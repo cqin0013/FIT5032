@@ -53,14 +53,17 @@ async function doSignOut() {
         <button class="nav-link" @click="go('/AuthorsTable')">Coping Tips</button>
         <button class="nav-link" @click="go('/Geo')">Find Support</button>
         <button class="nav-link" @click="go('/Email')">Feedback</button>
+
+        <button class="nav-link" @click="go('/analytics')">Analytics</button>
+        <button class="nav-link" @click="go('/booking')">Booking</button>
+        <button class="nav-link" @click="go('/api-docs')">API</button>
+
         <button class="nav-link" @click="go('/about')">About</button>
-        <button
-          v-if="role==='admin'"
-          class="nav-link"
-          title="Admin (role=admin)"
-          @click="go('/admin')"
-        >
+        <button v-if="role === 'admin'" class="nav-link" title="Admin (role=admin)" @click="go('/admin')">
           Admin
+        </button>
+        <button v-if="role === 'admin'" class="nav-link" @click="go('/bulk-email')">
+          Bulk Email
         </button>
       </nav>
 
@@ -84,16 +87,18 @@ async function doSignOut() {
   top: 0;
   z-index: 20;
   backdrop-filter: saturate(160%) blur(8px);
-  background: linear-gradient(135deg, rgba(108,124,255,.9), rgba(122,211,207,.9));
+  background: linear-gradient(135deg, rgba(108, 124, 255, .9), rgba(122, 211, 207, .9));
   color: #fff;
-  border-bottom: 1px solid rgba(255,255,255,.28);
+  border-bottom: 1px solid rgba(255, 255, 255, .28);
 }
+
 .header-row {
   display: flex;
   align-items: center;
   gap: 1rem;
   padding: .6rem 0;
 }
+
 .brand {
   display: flex;
   align-items: center;
@@ -101,18 +106,23 @@ async function doSignOut() {
   cursor: pointer;
   font-size: 1.05rem;
 }
+
 .logo-bubble {
   display: inline-flex;
-  width: 32px; height: 32px;
+  width: 32px;
+  height: 32px;
   border-radius: 999px;
-  align-items: center; justify-content: center;
-  background: rgba(255,255,255,.2);
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, .2);
 }
+
 .nav {
   display: flex;
   gap: .5rem;
   flex: 1;
 }
+
 .nav-link {
   background: transparent;
   border: none;
@@ -122,15 +132,19 @@ async function doSignOut() {
   border-radius: 999px;
   cursor: pointer;
 }
-.nav-link:hover, .nav-link:focus {
+
+.nav-link:hover,
+.nav-link:focus {
   outline: none;
-  background: rgba(255,255,255,.18);
+  background: rgba(255, 255, 255, .18);
 }
+
 .auth {
   display: flex;
   gap: .5rem;
   align-items: center;
 }
+
 .who {
   font-size: .9rem;
   opacity: .9;
