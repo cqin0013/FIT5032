@@ -1,6 +1,6 @@
 <template>
   <div style="max-width:480px;margin:2rem auto;">
-    <h2>Firebase login</h2>
+    <h2>Sign In</h2>
     <input v-model.trim="email" type="email" placeholder="Email" maxlength="50" />
     <input v-model.trim="password" type="password" placeholder="Password" maxlength="50" />
     <button :disabled="loading" @click="login">{{ loading ? "Logging in..." : "Log in" }}</button>

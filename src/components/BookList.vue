@@ -1,12 +1,12 @@
 <template>
   <section>
     <div class="d-flex align-items-center gap-2 mb-3">
-      <h2 class="m-0">Books</h2>
+      <h2 class="m-0">Resources</h2>
       <button class="btn btn-outline-secondary btn-sm" @click="loadDefault" :disabled="loading">
-        orderBy(createdAt desc) + limit(20)
+        Recent resources (limit 20)
       </button>
       <button class="btn btn-outline-secondary btn-sm" @click="loadWhere" :disabled="loading">
-        where(isbn &gt; 1000) + orderBy(isbn asc)
+        Filter: Resource ID > 1000 (ascending)
       </button>
       <button class="btn btn-outline-secondary btn-sm" @click="reload" :disabled="loading">Reload</button>
     </div>
@@ -22,7 +22,7 @@
       >
         <div>
           <div><strong>{{ b.name }}</strong></div>
-          <small>ISBN: {{ b.isbn }}</small>
+          <small>Resource ID: {{ b.isbn }}</small>
         </div>
 
         <div class="d-flex gap-2">

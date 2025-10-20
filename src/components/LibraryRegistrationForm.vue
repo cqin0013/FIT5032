@@ -130,20 +130,20 @@ const validateReason = (blur) => {
 </script>
 
 <template>
-  <!-- 🗄️ W5. Library Registration Form -->
+
   <div class="container mt-5">
     <div class="row">
       <div class="col-md-8 offset-md-2">
-        <h1 class="text-center">🗄️Library Registration Form</h1>
+        <h1 class="text-center">🗄️Wellbeing Program Registration</h1>
         <p class="text-center">
-          This form now includes validation. Registered users are displayed in a data table below (PrimeVue).
+          Join our youth wellbeing program. Your entry is private and used to tailor resources.
         </p>
 
         <form @submit.prevent="submitForm">
           <!-- Row 1: Username | Gender -->
           <div class="row mb-3">
             <div class="col-md-6 col-sm-6">
-              <label for="username" class="form-label">Username</label>
+              <label for="username" class="form-label">Preferred name</label>
               <input
                 id="username"
                 type="text"
@@ -220,7 +220,7 @@ const validateReason = (blur) => {
             </div>
 
             <div class="col-md-6 col-sm-6">
-              <label for="reason" class="form-label">Reason for joining</label>
+              <label for="reason" class="form-label">What support are you looking for?</label>
               <textarea
                 id="reason"
                 rows="3"

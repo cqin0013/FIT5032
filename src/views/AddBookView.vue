@@ -1,6 +1,6 @@
 <template>
   <div style="max-width:520px;margin:2rem auto;">
-    <h1>Add Book</h1>
+    <h1>Add Resource</h1>
 
     <form @submit.prevent="addBook">
       <div class="mb-3">
@@ -15,7 +15,7 @@
       </div>
 
       <button type="submit" class="btn btn-primary" :disabled="loading">
-        {{ loading ? 'Saving…' : 'Add Book' }}
+        {{ loading ? 'Saving…' : 'Add Resource' }}
       </button>
 
       <p class="mt-3 text-success" v-if="ok">{{ ok }}</p>

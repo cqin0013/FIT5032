@@ -1,74 +1,102 @@
 [
-  {
-    "id": 1,
-    "name": "Jane Austen",
-    "birthYear": 1775,
-    "genres": [
-      "Romance",
-      "Social commentary"
-    ],
-    "famousWorks": [
-      {
-        "title": "Pride and Prejudice",
-        "year": 1813
-      },
-      {
-        "title": "Sense and Sensibility",
-        "year": 1811
-      }
-    ]
-  },
-  {
-    "id": 2,
-    "name": "George Orwell",
-    "birthYear": 1903,
-    "genres": [
-      "Dystopian",
-      "Political satire"
-    ],
-    "famousWorks": [
-      {
-        "title": "1984",
-        "year": 1949
-      },
-      {
-        "title": "Animal Farm",
-        "year": 1945
-      }
-    ]
-  },
-  {
-    "id": 3,
-    "name": "Agatha Christie",
-    "birthYear": 1890,
-    "genres": [
-      "Mystery",
-      "Crime fiction"
-    ],
-    "famousWorks": [
-      {
-        "title": "Murder on the Orient Express",
-        "year": 1934
-      },
-      {
-        "title": "Death on the Nile",
-        "year": 1937
-      }
-    ]
-  },
-  {
-    "name": "Haruki Murakami",
-    "born": 1949,
-    "genre": "Fiction"
-  },
-  {
-    "name": "Ursula K. Le Guin",
-    "born": 1929,
-    "genre": "Sci-Fi"
-  },
-  {
-    "name": "Agatha Christie",
-    "born": 1890,
-    "genre": "Mystery"
-  }
+  { "name": "4-7-8 Breathing", "genre": "Breathing", "born": "NCCMH Guide" },
+  { "name": "Box Breathing (4×4)", "genre": "Breathing", "born": "US Navy / CBT" },
+  { "name": "Paced Breathing (6 bpm)", "genre": "Breathing", "born": "HRV Training" },
+  { "name": "Diaphragmatic Breathing", "genre": "Breathing", "born": "Physio/CBT" },
+  { "name": "Extended Exhale (2× out-breath)", "genre": "Breathing", "born": "Somatic" },
+
+  { "name": "5-4-3-2-1 Grounding", "genre": "Grounding", "born": "DBT Skills" },
+  { "name": "Name-Place-Time Orientation", "genre": "Grounding", "born": "Trauma Care" },
+  { "name": "Temperature Reset (cold splash)", "genre": "Grounding", "born": "DBT TIPP" },
+  { "name": "Object Focus (stone/coin)", "genre": "Grounding", "born": "Mindfulness" },
+  { "name": "Senses Scan (auditory first)", "genre": "Grounding", "born": "Mindfulness" },
+
+  { "name": "Cognitive Reframing", "genre": "Cognitive", "born": "CBT" },
+  { "name": "Catch–Check–Change (3C)", "genre": "Cognitive", "born": "CBT Schools" },
+  { "name": "Thought Record", "genre": "Cognitive", "born": "CBT Worksheet" },
+  { "name": "Probability Pie", "genre": "Cognitive", "born": "CBT Anxiety" },
+  { "name": "Best/Worst/Most-Likely", "genre": "Cognitive", "born": "CBT" },
+  { "name": "Decatastrophising", "genre": "Cognitive", "born": "CBT" },
+  { "name": "Evidence For/Against", "genre": "Cognitive", "born": "CBT" },
+  { "name": "Socratic Questioning", "genre": "Cognitive", "born": "CBT" },
+
+  { "name": "Behavioural Activation (BA)", "genre": "Behavioural", "born": "CBT Depression" },
+  { "name": "Tiny Steps Planning (15-min)", "genre": "Behavioural", "born": "BA" },
+  { "name": "Activity–Mood Log", "genre": "Behavioural", "born": "BA" },
+  { "name": "Graded Exposure (ladder)", "genre": "Behavioural", "born": "CBT Anxiety" },
+  { "name": "Opposite Action", "genre": "Behavioural", "born": "DBT" },
+
+  { "name": "Mindful Eating (first 3 bites)", "genre": "Mindfulness", "born": "MBSR" },
+  { "name": "Body Scan (10 minutes)", "genre": "Mindfulness", "born": "MBSR" },
+  { "name": "Leaves on a Stream", "genre": "Mindfulness", "born": "ACT" },
+  { "name": "Noting (label thoughts)", "genre": "Mindfulness", "born": "Vipassana/MBSR" },
+  { "name": "5-Min Mindful Walk", "genre": "Mindfulness", "born": "MBSR" },
+  { "name": "Self-Compassion Break", "genre": "Mindfulness", "born": "Neff 2003" },
+  { "name": "Loving-Kindness (Metta)", "genre": "Mindfulness", "born": "Compassion" },
+
+  { "name": "Sleep Window (consistent hours)", "genre": "Sleep", "born": "CBT-I" },
+  { "name": "Wind-Down Routine (30–60m)", "genre": "Sleep", "born": "Sleep Hygiene" },
+  { "name": "Light Rules (bright AM / dim PM)", "genre": "Sleep", "born": "CBT-I" },
+  { "name": "Caffeine Cut-off (6h)", "genre": "Sleep", "born": "Sleep Hygiene" },
+  { "name": "Stimulus Control (bed= sleep)", "genre": "Sleep", "born": "CBT-I" },
+  { "name": "Get Out if Awake (>20m)", "genre": "Sleep", "born": "CBT-I" },
+
+  { "name": "Values Card Sort", "genre": "ACT/Values", "born": "ACT" },
+  { "name": "Committed Action (one micro-step)", "genre": "ACT/Values", "born": "ACT" },
+  { "name": "Defusion (silly voice technique)", "genre": "ACT/Values", "born": "ACT" },
+  { "name": "Passengers on the Bus", "genre": "ACT/Values", "born": "ACT" },
+
+  { "name": "Emotion Labeling (name it)", "genre": "Emotion", "born": "Affect Labelling" },
+  { "name": "Urge Surfing", "genre": "Emotion", "born": "DBT/Addiction" },
+  { "name": "Feelings Wheel", "genre": "Emotion", "born": "Psychoeducation" },
+  { "name": "STOP Skill (Stop–Take breath–Observe–Proceed)", "genre": "Emotion", "born": "DBT" },
+
+  { "name": "SMART Goals (school tasks)", "genre": "Study/Exec", "born": "EF Coaching" },
+  { "name": "Pomodoro (25-5)", "genre": "Study/Exec", "born": "Time Mgmt" },
+  { "name": "Two-Minute Rule", "genre": "Study/Exec", "born": "Getting Things Done" },
+  { "name": "Distraction Audit", "genre": "Study/Exec", "born": "EF Coaching" },
+  { "name": "Task Decomposition (checklist)", "genre": "Study/Exec", "born": "EF Coaching" },
+
+  { "name": "Social Reach-Out (text a friend)", "genre": "Social", "born": "Peer Support" },
+  { "name": "I-Message (I feel… when… I need…)", "genre": "Social", "born": "Communication" },
+  { "name": "Boundaries Script", "genre": "Social", "born": "Psychoeducation" },
+  { "name": "Support Triangle (peer/family/pro)", "genre": "Social", "born": "Wellbeing" },
+
+  { "name": "Quick Exercise (10 pushups / 20 squats)", "genre": "Body", "born": "Behavioural" },
+  { "name": "Stretch Set (neck/shoulders/hips)", "genre": "Body", "born": "Physio" },
+  { "name": "Sunlight 10–15 min", "genre": "Body", "born": "Circadian" },
+  { "name": "Hydration Habit (water bottle)", "genre": "Body", "born": "Health Ed" },
+
+  { "name": "Journaling: 3 Good Things", "genre": "Journaling", "born": "Positive Psych" },
+  { "name": "Gratitude Letter (send or keep)", "genre": "Journaling", "born": "Positive Psych" },
+  { "name": "Worry Time (scheduled 15m)", "genre": "Journaling", "born": "CBT" },
+  { "name": "Brain Dump before Bed", "genre": "Journaling", "born": "CBT-I" },
+
+  { "name": "Media Diet (news limit 15m)", "genre": "Digital Hygiene", "born": "Psychoeducation" },
+  { "name": "Social App Curfew (1h before bed)", "genre": "Digital Hygiene", "born": "Sleep Hygiene" },
+  { "name": "Home Screen Detox (remove bait)", "genre": "Digital Hygiene", "born": "EF Coaching" },
+  { "name": "Do-Not-Disturb Study Blocks", "genre": "Digital Hygiene", "born": "Time Mgmt" },
+
+  { "name": "Crisis Plan Card", "genre": "Safety", "born": "Safety Planning" },
+  { "name": "Warning Signs List", "genre": "Safety", "born": "Safety Planning" },
+  { "name": "Coping Menu (ranked)", "genre": "Safety", "born": "Safety Planning" },
+  { "name": "Contacts Ladder (friend→helpline)", "genre": "Safety", "born": "Safety Planning" },
+
+  { "name": "Mindful Shower", "genre": "Self-Care", "born": "MBSR" },
+  { "name": "Creative Break (draw/music/lego)", "genre": "Self-Care", "born": "Wellbeing" },
+  { "name": "Nature Micro-Visit", "genre": "Self-Care", "born": "Ecotherapy" },
+  { "name": "Kindness Act (1/day)", "genre": "Self-Care", "born": "Positive Psych" },
+
+  { "name": "Test Anxiety Script (breath + reframe)", "genre": "School Anxiety", "born": "CBT" },
+  { "name": "Presentation Ladder (camera→mirror→pair)", "genre": "School Anxiety", "born": "Exposure" },
+  { "name": "Exam Day Pack (water, snack, timer)", "genre": "School Anxiety", "born": "Psychoeducation" },
+  { "name": "Study Buddy (accountability)", "genre": "School Anxiety", "born": "Peer Support" },
+
+  { "name": "Mindful Gaming Timer", "genre": "Gaming", "born": "Digital Wellbeing" },
+  { "name": "Win-Lose Reset (2-minute breath)", "genre": "Gaming", "born": "Emotion Reg" },
+  { "name": "Tilt Break (walk water wash)", "genre": "Gaming", "born": "Somatic" },
+
+  { "name": "Meal Regularity (3+1)", "genre": "Nutrition", "born": "Health Ed" },
+  { "name": "Balanced Plate Visual", "genre": "Nutrition", "born": "Dietitian" },
+  { "name": "Snack Swap (nuts/fruit)", "genre": "Nutrition", "born": "Health Ed" }
 ]

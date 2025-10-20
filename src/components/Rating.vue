@@ -51,7 +51,7 @@ onBeforeUnmount(() => off && off())
         v-for="n in 5"
         :key="n"
         @click="setScore(n)"
-        :aria-label="`rate ${n}`"
+        :aria-label="`How helpful was this guide for youth anxiety? ${n}`"
         title="点击评分"
       >
         {{ n <= myScore ? '★' : '☆' }}

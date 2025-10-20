@@ -23,7 +23,7 @@
 
     <p>
       <button :disabled="loading" @click="register">
-        {{ loading ? "Registering..." : "Save to Firebase" }}
+        {{ loading ? "Registering..." : "Create Account" }}
       </button>
     </p>
 
@@ -99,7 +99,7 @@ const register = async () => {
         "。";
     }
 
-    ok.value = "Registration successful! Please log in.";
+    ok.value = "Registration successful! Please Sign in.";
 // Experience: Jump to the login page after giving a success prompt
     router.push("/FireLogin");
   } catch (e) {
