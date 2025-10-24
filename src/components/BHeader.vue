@@ -58,6 +58,8 @@ async function doSignOut() {
         <button class="nav-link" @click="go('/booking')">Booking</button>
         <button class="nav-link" @click="go('/api-docs')">API</button>
 
+        <button class="nav-link" @click="go('/WeatherCheck')">Weather</button>
+
         <button class="nav-link" @click="go('/about')">About</button>
         <button v-if="role === 'admin'" class="nav-link" title="Admin (role=admin)" @click="go('/admin')">
           Admin

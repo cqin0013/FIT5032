@@ -23,6 +23,8 @@ import BulkEmailView from "@/views/BulkEmailView.vue";
 import APIDocsView from "@/views/APIDocsView.vue";
 
 
+import WeatherCheckView from "@/views/WeatherCheckView.vue";
+
 const routes = [
 
 { path: "/analytics", name: "Analytics", component: AnalyticsView },
@@ -51,6 +53,8 @@ const routes = [
   { path: "/AuthorsTable", name: "AuthorsTable", component: AuthorsTableView }, // Coping Tips
   { path: "/Geo", name: "Geo", component: GeoLocationView },                    // Find Support
   { path: "/Email", name: "Email", component: EmailView }, // 私密留言
+
+  { path: "/WeatherCheck", name: "WeatherCheck", component: WeatherCheckView },
 ];
 
 const router = createRouter({
